@@ -1,0 +1,17 @@
+# Ghostwire — cava theme
+# Append/source this into ~/.config/cava/config, or `cat` it into the
+# [color] section. Bars run cyan -> blue -> purple, matching the
+# teal-to-purple identity gradient used across the theme.
+
+[color]
+background = '#08090d'
+foreground = '#50dcc8'
+gradient = 1
+gradient_count = 3
+gradient_color_1 = '#50dcc8'
+gradient_color_2 = '#3fc4de'
+gradient_color_3 = '#9664dc'
+
+[general]
+bar_width = 2
+bar_spacing = 1

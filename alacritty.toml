@@ -1,0 +1,55 @@
+# Ghostwire — Alacritty explicit color config
+# Merge into ~/.config/alacritty/alacritty.toml, or `import = ["~/.config/omarchy/current/theme/alacritty.toml"]`
+
+[colors.primary]
+background = "#08090d"
+foreground = "#c8d2e6"
+dim_foreground = "#3a4250"
+bright_foreground = "#e8f7f4"
+
+[colors.cursor]
+text = "#08090d"
+cursor = "#50dcc8"
+
+[colors.vi_mode_cursor]
+text = "#08090d"
+cursor = "#9664dc"
+
+[colors.selection]
+text = "#c8d2e6"
+background = "#1c2740"
+
+[colors.search.matches]
+foreground = "#08090d"
+background = "#3fc4de"
+
+[colors.search.focused_match]
+foreground = "#08090d"
+background = "#50dcc8"
+
+[colors.normal]
+black = "#08090d"
+red = "#dc5050"
+green = "#50c878"
+yellow = "#dcb43c"
+blue = "#3fc4de"
+magenta = "#9664dc"
+cyan = "#50dcc8"
+white = "#c8d2e6"
+
+[colors.bright]
+black = "#3a4250"
+red = "#ec6a88"
+green = "#7ee8a8"
+yellow = "#fab795"
+blue = "#6fb0e8"
+magenta = "#b98ae8"
+cyan = "#6be4e6"
+white = "#e8f7f4"
+
+[colors.line_indicator]
+foreground = "None"
+background = "#151b26"
+
+[window]
+opacity = 0.97

@@ -1,0 +1,18 @@
+{
+  "name": "ghostwire-theme",
+  "displayName": "Ghostwire",
+  "description": "Dark teal/purple hacker theme — matches the Ghostwire Omarchy theme and torjet's TUI palette.",
+  "version": "1.0.0",
+  "publisher": "ghostwire",
+  "engines": { "vscode": "^1.70.0" },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ghostwire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ghostwire-color-theme.json"
+      }
+    ]
+  }
+}

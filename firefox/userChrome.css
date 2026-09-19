@@ -1,0 +1,65 @@
+/* Ghostwire — Firefox userChrome.css
+ * Requires toolkit.legacyUserProfileCustomizations.stylesheets = true in
+ * about:config, then place this + userContent.css in
+ * <profile>/chrome/ (create the folder if it doesn't exist) and restart.
+ */
+
+:root {
+  --toolbar-bgcolor: #08090d !important;
+  --toolbar-color: #c8d2e6 !important;
+  --lwt-accent-color: #08090d !important;
+  --lwt-text-color: #c8d2e6 !important;
+  --tab-selected-bgcolor: #1c2740 !important;
+  --tabpanel-background-color: #08090d !important;
+  --urlbar-box-bgcolor: #151b26 !important;
+  --urlbar-box-focus-bgcolor: #151b26 !important;
+  --toolbarbutton-icon-fill: #c8d2e6 !important;
+  --toolbarbutton-hover-background: #1c2740 !important;
+}
+
+#navigator-toolbox,
+#nav-bar,
+#PersonalToolbar,
+#TabsToolbar {
+  background-color: #08090d !important;
+  border-color: #1a2233 !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+  background-color: #1c2740 !important;
+  border-radius: 8px !important;
+}
+
+.tabbrowser-tab .tab-background {
+  border-radius: 8px !important;
+}
+
+#tabbrowser-tabs .tab-content .tab-label {
+  color: #c8d2e6 !important;
+}
+
+#urlbar,
+#searchbar {
+  background-color: #151b26 !important;
+  color: #e8f7f4 !important;
+  border: 1px solid #1a2233 !important;
+  border-radius: 8px !important;
+}
+
+#urlbar[focused="true"] {
+  border-color: #50dcc8 !important;
+}
+
+.urlbar-input {
+  color: #e8f7f4 !important;
+}
+
+/* cyan accent on the active tab's top border */
+.tabbrowser-tab[selected="true"] .tab-line {
+  background-color: #50dcc8 !important;
+}
+
+toolbarbutton:hover {
+  background-color: #1c2740 !important;
+  border-radius: 6px !important;
+}

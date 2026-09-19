@@ -1,0 +1,36 @@
+/* Ghostwire — Steam client theme accents
+   For a CSS-loader/skin manager (e.g. Millennium: https://steambrew.app/).
+   Targets Steam's common library/friends-list CSS variables; selectors can
+   shift between Steam client updates, so treat this as a starting point. */
+
+:root {
+  --ghostwire-bg: #08090d;
+  --ghostwire-bg-alt: #151b26;
+  --ghostwire-fg: #c8d2e6;
+  --ghostwire-accent: #50dcc8;
+  --ghostwire-accent2: #9664dc;
+  --ghostwire-border: #1a2233;
+}
+
+.appstore_App,
+.friendsListRoot,
+body {
+  background-color: var(--ghostwire-bg) !important;
+  color: var(--ghostwire-fg) !important;
+}
+
+.DialogButton,
+._1anR8t9UlIes-e5NGqXjxN {
+  background: linear-gradient(45deg, var(--ghostwire-accent), var(--ghostwire-accent2)) !important;
+  border: none !important;
+  color: #08090d !important;
+}
+
+.tab_row_active,
+.Focusable:focus {
+  border-color: var(--ghostwire-accent) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--ghostwire-border) !important;
+}

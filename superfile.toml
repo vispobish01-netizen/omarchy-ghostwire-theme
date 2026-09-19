@@ -1,0 +1,36 @@
+# Ghostwire — Superfile (terminal file manager) theme
+# Copy to ~/.config/superfile/theme/ghostwire.toml, then set
+# `theme = "ghostwire"` in ~/.config/superfile/config.toml
+# NOTE: superfile's exact key set can change between versions —
+# check `spf --version` / their theme docs if a key here is ignored.
+
+file_panel_border = "#1a2233"
+file_panel_top_directory_icon = "#50dcc8"
+file_panel_top_path = "#c8d2e6"
+file_panel_item_selected_fg = "#e8f7f4"
+file_panel_item_selected_bg = "#1c2740"
+file_panel_item = "#c8d2e6"
+file_panel_directory_item = "#50dcc8"
+
+sidebar_title = "#9664dc"
+sidebar_item_selected_fg = "#e8f7f4"
+sidebar_item_selected_bg = "#1c2740"
+sidebar_divider = "#1a2233"
+sidebar_bg = "#090c11"
+
+footer_border = "#1a2233"
+footer_path = "#50dcc8"
+footer_selection_total = "#c8d2e6"
+footer_cursor_position = "#3a4250"
+
+modal_border_activated = "#50dcc8"
+modal_border_deactivated = "#3a4250"
+modal_title = "#e8f7f4"
+
+full_screen_bg = "#08090d"
+help_menu_hotkey = "#50dcc8"
+help_menu_title = "#c8d2e6"
+
+cancel_button = "#dc5050"
+confirm_button = "#50c878"
+error_display = "#dc5050"

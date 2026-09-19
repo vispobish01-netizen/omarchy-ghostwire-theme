@@ -1,0 +1,11 @@
+/* Ghostwire — Zen Browser (Firefox fork) chrome
+   Zen uses the same userChrome.css mechanism as Firefox. This is a thin
+   pointer file — the real rules live in firefox/userChrome.css and
+   firefox/userContent.css, which apply as-is to Zen's profile chrome
+   folder (enable toolkit.legacyUserProfileCustomizations.stylesheets in
+   about:config, same as Firefox). Copy both files to:
+     <zen-profile>/chrome/userChrome.css
+     <zen-profile>/chrome/userContent.css
+   Zen-specific accent: set Settings > Zen > Theme > Accent Color to
+   #50dcc8 to match the rest of the identity in Zen's native UI (tabs
+   sidebar, workspaces, compact mode) that userChrome.css doesn't reach. */

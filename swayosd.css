@@ -1,0 +1,53 @@
+/* Ghostwire — SwayOSD style
+ * Omarchy auto-generates SwayOSD colors from colors.toml; this hand file
+ * adds the rounded glass-panel look and a cyan progress fill (purple for
+ * capslock, per SwayOSD's default class split).
+ */
+
+window {
+    background-color: #08090d;
+    border: 1px solid #1a2233;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+#container {
+    background-color: transparent;
+}
+
+image {
+    color: #c8d2e6;
+    -gtk-icon-effect: none;
+}
+
+label {
+    color: #c8d2e6;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+progressbar {
+    background-color: transparent;
+}
+
+progressbar trough {
+    background-color: #1c2740;
+    border-radius: 8px;
+    min-height: 10px;
+}
+
+progressbar progress {
+    background-color: #50dcc8;
+    border-radius: 8px;
+    min-height: 10px;
+}
+
+progressbar.capslock progress,
+#capslock progress {
+    background-color: #9664dc;
+}
+
+progressbar.muted progress,
+#muted progress {
+    background-color: #dc5050;
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "ghostwire-ascii.txt",
+    "color": {
+      "1": "#50dcc8",
+      "2": "#9664dc",
+      "3": "#e8f7f4"
+    },
+    "padding": { "top": 1, "right": 3 }
+  },
+  "display": {
+    "separator": "  ",
+    "color": { "keys": "#50dcc8", "output": "#c8d2e6", "title": "#e8f7f4" }
+  },
+  "modules": [
+    { "type": "title", "color": { "user": "#50dcc8", "at": "#3a4250", "host": "#9664dc" } },
+    "separator",
+    { "type": "os", "key": "  OS" },
+    { "type": "kernel", "key": "  Kernel" },
+    { "type": "packages", "key": "󰏗  Packages" },
+    { "type": "shell", "key": "  Shell" },
+    { "type": "wm", "key": "  WM" },
+    { "type": "terminal", "key": "  Terminal" },
+    { "type": "uptime", "key": "  Uptime" },
+    "break",
+    { "type": "cpu", "key": "  CPU" },
+    { "type": "gpu", "key": "󰢮  GPU" },
+    { "type": "memory", "key": "  Memory" },
+    { "type": "disk", "key": "  Disk" },
+    { "type": "localip", "key": "󰩟  LAN" },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "key": "  Palette"
+    }
+  ]
+}

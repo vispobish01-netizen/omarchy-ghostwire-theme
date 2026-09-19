@@ -1,0 +1,35 @@
+/* Ghostwire — Firefox userContent.css
+ * Styles Firefox's own pages (about:newtab, about:config, reader mode, the
+ * built-in PDF viewer) — not arbitrary websites. Same install steps as
+ * userChrome.css: needs toolkit.legacyUserProfileCustomizations.stylesheets
+ * enabled, lives alongside it in <profile>/chrome/.
+ */
+
+@-moz-document url(about:newtab), url(about:home), url(about:blank) {
+  :root {
+    background-color: #08090d !important;
+  }
+}
+
+@-moz-document url-prefix(about:config) {
+  body { background-color: #08090d !important; color: #c8d2e6 !important; }
+}
+
+@-moz-document url-prefix(about:reader) {
+  body.dark {
+    background-color: #08090d !important;
+  }
+  .container {
+    background-color: #08090d !important;
+    color: #c8d2e6 !important;
+  }
+  a { color: #50dcc8 !important; }
+}
+
+@-moz-document url-prefix(resource://pdf.js) {
+  :root {
+    --toolbar-bg-color: #08090d !important;
+    --body-bg-color: #06070c !important;
+    --main-color: #c8d2e6 !important;
+  }
+}

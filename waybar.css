@@ -1,0 +1,126 @@
+/* Ghostwire — Waybar style
+ * Omarchy auto-generates waybar colors from colors.toml; this hand file adds
+ * the extra polish (rounded modules, cyan/purple split, glow on hover) that
+ * a plain color substitution doesn't give you.
+ */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #08090d;
+    color: #c8d2e6;
+    border-bottom: 1px solid #1a2233;
+}
+
+#workspaces {
+    background-color: #090c11;
+    border-radius: 8px;
+    margin: 4px 4px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: #3a4250;
+    padding: 0 8px;
+    border-radius: 6px;
+}
+
+#workspaces button.active {
+    color: #06070c;
+    background-color: #50dcc8;
+}
+
+#workspaces button.urgent {
+    color: #06070c;
+    background-color: #dc5050;
+}
+
+#workspaces button:hover {
+    background-color: #1c2740;
+    color: #e8f7f4;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#custom-notification,
+#backlight,
+#bluetooth {
+    background-color: #090c11;
+    color: #c8d2e6;
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+#clock {
+    color: #50dcc8;
+    font-weight: bold;
+}
+
+#battery.charging {
+    color: #50c878;
+}
+
+#battery.warning:not(.charging) {
+    color: #dcb43c;
+}
+
+#battery.critical:not(.charging) {
+    color: #dc5050;
+    animation: blink-critical 1.5s steps(2) infinite;
+}
+
+@keyframes blink-critical {
+    to { color: #e8f7f4; }
+}
+
+#network.disconnected {
+    color: #dc5050;
+}
+
+#pulseaudio.muted {
+    color: #3a4250;
+}
+
+#cpu {
+    color: #3fc4de;
+}
+
+#memory {
+    color: #9664dc;
+}
+
+#temperature.critical {
+    color: #dc5050;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #dc5050;
+}
+
+tooltip {
+    background-color: #090c11;
+    border: 1px solid #1a2233;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #c8d2e6;
+}

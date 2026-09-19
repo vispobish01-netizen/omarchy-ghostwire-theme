@@ -1,0 +1,66 @@
+/* Ghostwire — GTK4 / libadwaita override
+ * Omarchy's colors.toml templates terminal/Hyprland/Waybar/btop/etc, but
+ * NOT GTK apps (Nautilus, Text Editor, Settings, and other libadwaita apps).
+ * Drop this in as gtk.css and Omarchy will symlink it into
+ * ~/.config/gtk-4.0/gtk.css (and gtk-3.0/gtk.css) when the theme is active.
+ */
+
+@define-color accent_color        #50dcc8;
+@define-color accent_bg_color     #50dcc8;
+@define-color accent_fg_color     #06070c;
+
+@define-color window_bg_color     #08090d;
+@define-color window_fg_color     #c8d2e6;
+@define-color view_bg_color       #090c11;
+@define-color view_fg_color       #c8d2e6;
+
+@define-color headerbar_bg_color  #090c11;
+@define-color headerbar_fg_color  #c8d2e6;
+@define-color headerbar_border_color #1a2233;
+@define-color headerbar_backdrop_color #06070c;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color sidebar_bg_color    #06070c;
+@define-color sidebar_fg_color    #c8d2e6;
+@define-color sidebar_backdrop_color #06070c;
+
+@define-color card_bg_color       #151b26;
+@define-color card_fg_color       #c8d2e6;
+@define-color card_shade_color    rgba(0, 0, 0, 0.25);
+
+@define-color dialog_bg_color     #08090d;
+@define-color dialog_fg_color     #c8d2e6;
+
+@define-color popover_bg_color    #090c11;
+@define-color popover_fg_color    #c8d2e6;
+
+@define-color shade_color         rgba(0, 0, 0, 0.25);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
+
+@define-color destructive_bg_color #dc5050;
+@define-color destructive_fg_color #06070c;
+@define-color success_bg_color    #50c878;
+@define-color success_fg_color    #06070c;
+@define-color warning_bg_color    #dcb43c;
+@define-color warning_fg_color    #06070c;
+@define-color error_bg_color      #dc5050;
+@define-color error_fg_color      #06070c;
+
+/* selection / cursor accents */
+selection,
+*:selected {
+    background-color: #1c2740;
+    color: #e8f7f4;
+}
+
+/* thin cyan focus ring instead of GTK's default blue */
+*:focus-visible {
+    outline-color: #50dcc8;
+}
+
+/* subtle purple tint on active/checked toggles, matching the QML lock design */
+switch:checked,
+checkbutton check:checked,
+radiobutton radio:checked {
+    background-color: #9664dc;
+}

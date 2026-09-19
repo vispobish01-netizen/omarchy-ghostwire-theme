@@ -1,0 +1,74 @@
+# ── Ghostwire · Omarchy theme palette ─────────────────────────────────────
+# Identity: teal/cyan + purple on near-black, unified with the TorJet TUI
+# palette and the wallhaven-p931d9 wallpaper (teal -> deep purple gradient,
+# hooded figure at a laptop).
+#
+# Schema: full modern Omarchy color set (the currency of every template under
+# /usr/share/omarchy/default/themed/*.tpl) PLUS a legacy ANSI block kept in
+# sync for maximal tool compatibility. `omarchy-theme-color` resolves both;
+# modern named keys win, colorN stays as the raw ANSI reference.
+#
+# Design note: terminal cursors render from `bright_foreground`, so that value
+# is a pale ghost-cyan-tinted white (#e8f7f4) — the cursor glows faintly cyan
+# instead of hard white.
+
+mode = "dark"
+
+# ── brand tokens ───────────────────────────────────────────────────────────
+accent               = "#50dcc8"   # Ghostwire signature cyan (#50dcc8)
+cursor               = "#50dcc8"   # advisory; renderer resolves cursors to bright_foreground
+selection            = "#1c2740"   # focused selection fill (blued, deeper than stock)
+muted                = "#3a4250"   # disabled / inactive text
+selection_foreground = "#c8d2e6"
+selection_background = "#1c2740"
+
+# ── surface depth (near-black cyan/blue glass) ────────────────────────────
+background           = "#08090d"   # primary surface
+dark_background      = "#090c11"   # dropdowns / popovers
+darker_background    = "#06070c"   # deepest chrome (OSD, overlays)
+lighter_background   = "#151b26"   # raised cards / hover
+
+foreground           = "#c8d2e6"   # primary text (ghost slate-white)
+dark_foreground      = "#3a4250"   # subdued text
+light_foreground     = "#d8e1f2"   # emphasized text
+bright_foreground    = "#e8f7f4"   # brightest text AND cursor (cyan-tinted)
+
+# ── Hyprland borders ──────────────────────────────────────────────────────
+hyprland_active_border   = "rgba(50dcc8aa) rgba(9664dcaa) 45deg"   # cyan -> purple
+hyprland_inactive_border = "rgba(3a425099)"
+
+# ── semantic + ANSI core colors ───────────────────────────────────────────
+red                 = "#dc5050"   # errors, beats of the corruption glitch
+yellow              = "#dcb43c"   # warnings, amber reads
+orange              = "#d9792f"   # hot danger mid-point
+green               = "#50c878"   # ok / network-up hacker green
+cyan                = "#50dcc8"   # identity accent (-= accent above)
+blue                = "#3fc4de"   # cool cyan-blue float
+magenta             = "#9664dc"   # brand purple (the gradient's deep end)
+brown               = "#6e5a1e"   # ANSI sgr3 anchor
+
+# ── bright / emphasized variants ──────────────────────────────────────────
+bright_red          = "#ec6a88"
+bright_yellow       = "#fab795"
+bright_green        = "#7ee8a8"
+bright_cyan         = "#6be4e6"
+bright_blue         = "#6fb0e8"
+bright_magenta      = "#b98ae8"
+
+# ── legacy ANSI 0-15 (kept in sync with the named set above) ──────────────
+color0  = "#08090d"   # black    = surface bg
+color1  = "#dc5050"   # red      = red
+color2  = "#50c878"   # green    = green
+color3  = "#dcb43c"   # yellow   = yellow
+color4  = "#3fc4de"   # blue     = blue
+color5  = "#9664dc"   # magenta  = brand purple
+color6  = "#50dcc8"   # cyan     = accent
+color7  = "#c8d2e6"   # white    = foreground
+color8  = "#3a4250"   # bright black = muted
+color9  = "#ec6a88"   # bright red    = bright_red
+color10 = "#7ee8a8"   # bright green  = bright_green
+color11 = "#fab795"   # bright yellow = bright_yellow
+color12 = "#6fb0e8"   # bright blue   = bright_blue
+color13 = "#b98ae8"   # bright magenta= bright_magenta
+color14 = "#6be4e6"   # bright cyan   = bright_cyan
+color15 = "#e8f7f4"   # bright white  = bright_foreground
