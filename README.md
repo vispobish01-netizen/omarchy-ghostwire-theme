@@ -60,6 +60,17 @@ manual page. Third-party galleries like omarchythemes.com appear to mirror
 repos tagged with the `omarchy-theme` GitHub topic — add that topic to the
 repo once it's public.
 
+## Screenshots
+
+| | |
+|---|---|
+| ![fastfetch](screenshots/fastfetch.png) | ![btop + music player](screenshots/btop-player.png) |
+| `fastfetch` — hardware/software summary | `btop` + a streaming-radio widget |
+
+![yazi file manager + launcher menu](screenshots/yazi-launcher.png)
+`yazi` file manager, the Omarchy launcher's *Go…* menu (cyan→purple gradient
+border), and the `neural-mesh` background behind a LazyVim splash screen.
+
 ## What's inside
 
 - `colors.toml` — the 22 required color keys Omarchy templates everything from
