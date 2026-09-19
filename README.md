@@ -29,7 +29,21 @@ discord (vencord) · fish · fzf · superfile · zed · steam
 
 ## Install on Omarchy
 
-**Option A — local theme (this folder)**
+**Simplest — install via URL:**
+
+```bash
+omarchy-theme-install https://github.com/vispobish01-netizen/omarchy-ghostwire-theme
+```
+
+or from the menu: `Super + Alt + Space` → *Install > Theme* → paste that same URL.
+
+Either way Omarchy clones the repo, regenerates terminal (Kitty/Ghostty/
+Alacritty), Hyprland, Waybar, Hyprlock, Mako, btop, Walker, and SwayOSD
+colors from `colors.toml` automatically, sets `backgrounds/ghostwire.png`
+as your wallpaper, and the native Hyprlock unlock screen picks up
+`unlock.png` (see *Lock screen* below).
+
+**Manual / local copy of this folder:**
 
 ```bash
 mkdir -p ~/.config/omarchy/themes
@@ -37,30 +51,7 @@ cp -r ghostwire-theme ~/.config/omarchy/themes/ghostwire
 omarchy-theme-set ghostwire
 ```
 
-That's it — Omarchy regenerates terminal (Kitty/Ghostty/Alacritty), Hyprland,
-Waybar, Hyprlock, Mako, btop, Walker, and SwayOSD colors from `colors.toml`
-automatically, and sets `backgrounds/ghostwire.png` as your wallpaper. The
-native Hyprlock unlock screen picks up `unlock.png` automatically (see
-*Lock screen* below).
-
-**Option B — pick it from the menu**
-
-`Super + Alt + Space` → *Style > Theme* → select **Ghostwire** (it'll appear
-once the folder above exists).
-
-**Option C — install via URL (once pushed to GitHub)**
-
-Push this folder to a public repo named `omarchy-ghostwire-theme` (the
-`omarchy-[themename]-theme` naming convention is what makes it show up as
-just "ghostwire" after install), then:
-
-`Super + Alt + Space` → *Install > Theme* → paste the repo URL
-
-or from the CLI:
-
-```bash
-omarchy-theme-install https://github.com/<you>/omarchy-ghostwire-theme
-```
+Then `Super + Alt + Space` → *Style > Theme* → select **Ghostwire**.
 
 **Getting it listed publicly:** the official route is pinging `@tahayvr` on
 the Omarchy Discord (`#omarchy`) to get added to the
