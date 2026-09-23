@@ -3,15 +3,17 @@
 # .toml = theme name shown in its theme picker). Install:
 #   mkdir -p ~/.config/cliamp/themes
 #   cp cliamp.theme ~/.config/cliamp/themes/ghostwire.toml
-# Then pick "ghostwire" from cliamp's theme selector.
+# Then open cliamp, press `t` (Choose theme), and select "ghostwire".
 #
-# cliamp's Theme struct only exposes 6 hex fields (accent, brightfg, fg,
-# green, yellow, red) — no dedicated background/blue/purple slots — so this
-# maps 1:1 onto the same values used everywhere else in the theme.
+# Key names must match exactly (cliamp's parser is a flat key=value scanner,
+# not a full TOML parser, and silently drops any theme that fails
+# validation): bg, accent, bright_fg, fg, green, yellow, red. `bg` is
+# optional; the other five are required and must be #RRGGBB.
 
 name = "Ghostwire"
+bg = "#08090d"
 accent = "#50dcc8"
-brightfg = "#e8f7f4"
+bright_fg = "#e8f7f4"
 fg = "#c8d2e6"
 green = "#50c878"
 yellow = "#dcb43c"

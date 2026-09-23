@@ -140,10 +140,11 @@ theme](https://omarchy.org/manual/making-your-own-theme/)):
   gradient. Merge into `~/.config/cava/config`.
 - `cliamp.theme` — theme for the [cliamp](https://github.com/bjarneo/cliamp)
   terminal music player (the widget in the `btop-player.png` screenshot
-  above). cliamp's theme format only has 6 fields (accent/brightfg/fg/green/
-  yellow/red), mapped straight onto the same hex values as everywhere else.
-  Install: `cp cliamp.theme ~/.config/cliamp/themes/ghostwire.toml`, then
-  pick "ghostwire" in cliamp's theme picker.
+  above). cliamp's theme format has 7 fields (bg/accent/bright_fg/fg/green/
+  yellow/red — `bg` optional, the rest required as `#RRGGBB`), mapped
+  straight onto the same hex values as everywhere else. Install:
+  `cp cliamp.theme ~/.config/cliamp/themes/ghostwire.toml`, then in cliamp
+  press `t` and pick "ghostwire".
 
 These seven are genuine hand-written overrides (not just re-exports of
 `colors.toml`), so an `omarchy theme install` from a git copy of this repo
