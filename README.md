@@ -69,7 +69,7 @@ repo once it's public.
 
 ![yazi file manager + launcher menu](screenshots/yazi-launcher.png)
 `yazi` file manager, the Omarchy launcher's *Go…* menu (cyan→purple gradient
-border), and the `neural-mesh` background behind a LazyVim splash screen.
+border), and one of the background variants behind a LazyVim splash screen.
 
 ## What's inside
 
@@ -77,44 +77,31 @@ border), and the `neural-mesh` background behind a LazyVim splash screen.
 - `preview.png` — desktop preview for the theme gallery / listing
 - `unlock.png` + `preview-unlock.png` — native Hyprlock unlock screen image
   and its preview, shown under *Style > Unlock*
-- `backgrounds/` — sixteen wallpapers, cycle between them with `Super + Ctrl + Space`:
-  - `ghostwire.png` — the original hooded-figure-at-a-laptop wallpaper (default)
-  - `ghostwire-the-watcher.png` — a large hooded silhouette back-lit by a
-    noise-textured cyan/purple aurora halo, starfield above, faint laptop-glow
-    at the base
-  - `ghostwire-neon-skyline.png` — layered cyberpunk city silhouette (three
-    depth bands), hundreds of lit cyan/purple windows, a soft-glow moon, stars
-  - `ghostwire-code-rain.png` — Matrix-style falling glyph columns (real
-    monospace characters), bright white leading char + fading cyan/purple trail
-  - `ghostwire-aurora-peaks.png` — low-poly mountain ridgelines under noise-warped
-    cyan/purple/blue aurora ribbons and a starfield, cyan rim-light on the front ridge
-  - `ghostwire-circuit-drift.png` — glowing PCB-style traces (with real bloom)
-    branching outward from a central cyan hub, cyan/purple, starfield background
-  - `ghostwire-data-horizon.png` — synthwave-style perspective grid floor with
-    a banded yellow/red/purple sun glowing on the horizon
-  - `ghostwire-nebula-veil.png` — soft, dark cyan/purple nebula clouds (real
-    fractal noise) drifting behind a dense starfield
-  - `ghostwire-shattered-glass.png` — Voronoi-based low-poly glass facets with
-    glowing cyan/purple crack lines near the center
-  - `ghostwire-radar-sweep.png` — concentric radar rings, crosshair, a rotating
-    cyan sweep wedge with real falloff, and glowing green/purple blips
-  - `ghostwire-glitch-scan.png` — horizontal scanline bands with real pixel-shift
-    and RGB-channel-split glitches, cyan/purple accent lines, CRT scanline texture
-  - `ghostwire-wireframe-globe.png` — a tilted 3D wireframe globe (lat/long
-    great-circles with front/back depth shading), glowing cyan, starfield backdrop
-  - `ghostwire-neural-mesh.png` — a three-layer organic node-link network
-    (nearest-neighbour graph) spread across the full frame, purple/blue/cyan by depth
-  - `ghostwire-pulse-grid.png` — three oscilloscope waveforms with pulse spikes
-    over a faint grid, cyan/purple/blue traces, a sweeping cyan cursor line
-  - `ghostwire-signal-drift.png` — hundreds of flow-field particle streams
-    drifting left to right, cyan/purple/blue with bright leading heads
-  - `ghostwire-orbit-rings.png` — four tilted elliptical orbits around a glowing
-    cyan nucleus, one satellite node per orbit, starfield backdrop
+- `backgrounds/` — ten wallpapers, cycle between them with `Super + Ctrl + Space`:
+  - `ghostwire.png` — default wallpaper, same image as `ghostwire-sentinel.png`
+  - `ghostwire-sentinel.png` — a lone hooded silhouette standing before a huge
+    glowing cyan-to-purple halo, dark starfield backdrop
+  - `ghostwire-vigil.png` — close side-profile hooded bust, a thin glowing cyan
+    visor slit, faint cyan/purple circuit lines drifting off the hood
+  - `ghostwire-watcher-terminal.png` — a hooded figure seated at a small desk,
+    lit only by a glowing laptop screen, in a vast dark room
+  - `ghostwire-network-ghost.png` — a humanoid silhouette built from a glowing
+    cyan/purple network-mesh, dissolving into a stream of particles
+  - `ghostwire-flow-current.png` — smooth abstract ribbons of cyan-to-purple
+    light flowing across a near-black background
+  - `ghostwire-neon-skyline.png` — cyberpunk city silhouette, glowing cyan/purple
+    windows, a soft-glow moon, starfield
+  - `ghostwire-code-rain.png` — Matrix-style falling glyph columns in cyan/purple
+  - `ghostwire-aurora-peaks.png` — low-poly mountain ridgelines under cyan/purple
+    aurora ribbons and a starfield
+  - `ghostwire-circuit-drift.png` — glowing PCB-style traces branching outward
+    from a central bright node, cyan/purple, starfield background
+  - `ghostwire-wireframe-globe.png` — a tilted 3D wireframe globe, glowing cyan
+    with purple longitude lines, starfield backdrop
 
-  All sixteen are procedurally generated to match the palette — no external
-  images, so no licensing to worry about. The fifteen generated ones use real
-  fractal (simplex) noise, layered bloom/glow, and a shared palette-aware
-  toolkit rather than flat gradients, so they hold up at full brightness.
+  All ten (nine unique images) were generated with Google Gemini (Nano Banana)
+  from palette-matched prompts, then cropped to 16:9, resized to 2560x1440, and
+  color-graded locally to match `colors.toml` exactly.
 - `icons.theme` — sets file-manager icons to `Yaru-purple` to match the accent
 - `btop.theme` — hand-tuned btop theme (not the auto-generated one): purple/cyan/blue/yellow
   box outlines per panel, green→yellow→red load gradients, cyan→blue→purple
@@ -242,10 +229,13 @@ template, matching what the more detailed community themes ship.
 
 - Cursor and accent are both set to the cyan (`#50DCC8`) identity color.
 - `color5`/`color12` lean toward the purple end of the wallpaper's gradient.
-- `preview.png`, `preview-unlock.png`, `unlock.png`, and the two new
-  backgrounds (`ghostwire-the-watcher.png`, `ghostwire-aurora-peaks.png`)
-  are freshly generated procedural art matching this palette — no external
-  or AI-photoreal source images are bundled, to keep the repo license-clean.
+- `preview.png`, `preview-unlock.png`, and `unlock.png` are freshly generated
+  procedural art matching this palette.
+- The `backgrounds/` wallpapers (see *What's inside* above) were generated
+  with Google Gemini (Nano Banana) from palette-matched text prompts, then
+  cropped/resized/color-graded locally. They're AI-generated images rather
+  than procedural art or licensed photography — if that matters for your use
+  case, review Google's Gemini generated-content terms before redistributing.
 
 ## License
 
