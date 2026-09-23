@@ -77,10 +77,9 @@ border), and one of the background variants behind a LazyVim splash screen.
 - `preview.png` — desktop preview for the theme gallery / listing
 - `unlock.png` + `preview-unlock.png` — native Hyprlock unlock screen image
   and its preview, shown under *Style > Unlock*
-- `backgrounds/` — ten wallpapers, cycle between them with `Super + Ctrl + Space`:
-  - `ghostwire.png` — default wallpaper, same image as `ghostwire-sentinel.png`
-  - `ghostwire-sentinel.png` — a lone hooded silhouette standing before a huge
-    glowing cyan-to-purple halo, dark starfield backdrop
+- `backgrounds/` — nine wallpapers, cycle between them with `Super + Ctrl + Space`:
+  - `ghostwire.png` — default wallpaper: a lone hooded silhouette standing
+    before a huge glowing cyan-to-purple halo, dark starfield backdrop
   - `ghostwire-vigil.png` — close side-profile hooded bust, a thin glowing cyan
     visor slit, faint cyan/purple circuit lines drifting off the hood
   - `ghostwire-watcher-terminal.png` — a hooded figure seated at a small desk,
@@ -99,7 +98,7 @@ border), and one of the background variants behind a LazyVim splash screen.
   - `ghostwire-wireframe-globe.png` — a tilted 3D wireframe globe, glowing cyan
     with purple longitude lines, starfield backdrop
 
-  All ten (nine unique images) were generated with Google Gemini (Nano Banana)
+  All nine were generated with Google Gemini (Nano Banana)
   from palette-matched prompts, then cropped to 16:9, resized to 2560x1440, and
   color-graded locally to match `colors.toml` exactly.
 - `icons.theme` — sets file-manager icons to `Yaru-purple` to match the accent
@@ -139,8 +138,14 @@ theme](https://omarchy.org/manual/making-your-own-theme/)):
   red for muted.
 - `cava_theme` — audio visualizer bars in the cyan→blue→purple identity
   gradient. Merge into `~/.config/cava/config`.
+- `cliamp.theme` — theme for the [cliamp](https://github.com/bjarneo/cliamp)
+  terminal music player (the widget in the `btop-player.png` screenshot
+  above). cliamp's theme format only has 6 fields (accent/brightfg/fg/green/
+  yellow/red), mapped straight onto the same hex values as everywhere else.
+  Install: `cp cliamp.theme ~/.config/cliamp/themes/ghostwire.toml`, then
+  pick "ghostwire" in cliamp's theme picker.
 
-These six are genuine hand-written overrides (not just re-exports of
+These seven are genuine hand-written overrides (not just re-exports of
 `colors.toml`), so an `omarchy theme install` from a git copy of this repo
 would keep all of them as-is.
 
