@@ -71,6 +71,10 @@ repo once it's public.
 `yazi` file manager, the Omarchy launcher's *Go…* menu (cyan→purple gradient
 border), and one of the background variants behind a LazyVim splash screen.
 
+![btop, cliamp radio player, and the launcher's Find File menu](screenshots/launcher-cliamp.png)
+`btop` system monitor, `cliamp` internet-radio player, and the Omarchy
+launcher's *Find File* menu over a LazyVim splash screen.
+
 ## What's inside
 
 - `colors.toml` — the 22 required color keys Omarchy templates everything from
