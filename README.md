@@ -32,8 +32,10 @@ discord (vencord) · fish · fzf · superfile · zed · steam
 **Simplest — install via URL:**
 
 ```bash
-omarchy-theme-install https://github.com/vispobish01-netizen/omarchy-ghostwire-theme
+omarchy theme install https://github.com/vispobish01-netizen/omarchy-ghostwire-theme
 ```
+
+*(Legacy syntax: `omarchy-theme-install https://github.com/vispobish01-netizen/omarchy-ghostwire-theme`)*
 
 or from the menu: `Super + Alt + Space` → *Install > Theme* → paste that same URL.
 
@@ -47,8 +49,8 @@ as your wallpaper, and the native Hyprlock unlock screen picks up
 
 ```bash
 mkdir -p ~/.config/omarchy/themes
-cp -r ghostwire-theme ~/.config/omarchy/themes/ghostwire
-omarchy-theme-set ghostwire
+cp -r omarchy-ghostwire-theme ~/.config/omarchy/themes/ghostwire
+omarchy theme set ghostwire
 ```
 
 Then `Super + Alt + Space` → *Style > Theme* → select **Ghostwire**.
@@ -62,14 +64,15 @@ repo once it's public.
 
 ## Screenshots
 
-| | |
+| Desktop Showcase | Fastfetch & Starship |
 |---|---|
-| ![fastfetch](screenshots/fastfetch.png) | ![btop + music player](screenshots/btop-player.png) |
-| `fastfetch` — hardware/software summary | `btop` + a streaming-radio widget |
+| ![Desktop showcase](screenshots/desktop.png) | ![Fastfetch](screenshots/fastfetch.png) |
+| Neovim + `btop` + `fastfetch` in Ghostwire theme | Themed terminal with ASCII mascot & Starship prompt |
 
-![yazi file manager + launcher menu](screenshots/yazi-launcher.png)
-`yazi` file manager, the Omarchy launcher's *Go…* menu (cyan→purple gradient
-border), and one of the background variants behind a LazyVim splash screen.
+| btop & cliamp | Omarchy Quick Menu |
+|---|---|
+| ![btop + music player](screenshots/btop-player.png) | ![Omarchy Menu](screenshots/menu-launcher.png) |
+| Hand-tuned `btop` & `cliamp` music visualizer | Cyan→purple gradient glass launcher menu |
 
 ![btop, cliamp radio player, and the launcher's Find File menu](screenshots/launcher-cliamp.png)
 `btop` system monitor, `cliamp` internet-radio player, and the Omarchy
@@ -81,9 +84,16 @@ launcher's *Find File* menu over a LazyVim splash screen.
 - `preview.png` — desktop preview for the theme gallery / listing
 - `unlock.png` + `preview-unlock.png` — native Hyprlock unlock screen image
   and its preview, shown under *Style > Unlock*
-- `backgrounds/` — nine wallpapers, cycle between them with `Super + Ctrl + Space`:
+- `hyprland.lua` — custom Hyprland configuration with gradient borders (`#50dcc8` → `#9664dc`), `ghostwireEase` bezier animations, and subtle shadows
+- `shell.toml` + `shell.lock.toml` — full Omarchy Quickshell UI theme (bar, popup borders, launcher scrims, and lock screen)
+- `keyboard.rgb` — hex `#50dcc8` for hardware RGB keyboard backlights
+- `backgrounds/` — fourteen wallpapers, cycle between them with `omarchy theme bg next` (or `Super + Ctrl + Space`):
   - `ghostwire.png` — default wallpaper: a lone hooded silhouette standing
     before a huge glowing cyan-to-purple halo, dark starfield backdrop
+  - `ghostwire-fracture-core.png` — floating obsidian core with glowing cyan & purple fractures and ambient particle field
+  - `ghostwire-mainframe.png` — deep cyberpunk data vault and server monolith in teal/magenta illumination
+  - `ghostwire-prism-core.png` — refracted crystalline prism dispersing cyan and violet cybernetic rays
+  - `ghostwire-light-weave.png` — flowing dimensional weave of light ribbons and neon cyan filaments
   - `ghostwire-vigil.png` — close side-profile hooded bust, a thin glowing cyan
     visor slit, faint cyan/purple circuit lines drifting off the hood
   - `ghostwire-watcher-terminal.png` — a hooded figure seated at a small desk,
@@ -102,10 +112,10 @@ launcher's *Find File* menu over a LazyVim splash screen.
   - `ghostwire-wireframe-globe.png` — a tilted 3D wireframe globe, glowing cyan
     with purple longitude lines, starfield backdrop
 
-  All nine were generated with Google Gemini (Nano Banana)
-  from palette-matched prompts, then cropped to 16:9, resized to 2560x1440, and
+  All 14 were generated with Google Gemini (Nano Banana)
+  from palette-matched prompts, cropped to 16:9, resized to 2560x1440, and
   color-graded locally to match `colors.toml` exactly.
-- `icons.theme` — sets file-manager icons to `Yaru-purple` to match the accent
+- `icons.theme` — sets file-manager icons to `Yaru-purple-dark` to match the accent
 - `btop.theme` — hand-tuned btop theme (not the auto-generated one): purple/cyan/blue/yellow
   box outlines per panel, green→yellow→red load gradients, cyan→blue→purple
   network/process gradients. Drop-in — Omarchy keeps hand-written per-app files as-is
