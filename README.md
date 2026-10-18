@@ -1,39 +1,70 @@
 # Ghostwire — Omarchy Theme
 
+[![Omarchy Theme](https://img.shields.io/badge/omarchy-theme-50dcc8?style=flat-square&logo=arch-linux&logoColor=08090d)](https://github.com/vispobish01-netizen/omarchy-ghostwire-theme)
+[![WCAG AAA Contrast](https://img.shields.io/badge/WCAG%202.1-AAA%20Verified%20(11.4:1)-9664dc?style=flat-square)](scripts/contrast_check.py)
+[![Single Source Synchronized](https://img.shields.io/badge/palette-colors.toml%20synced-50c878?style=flat-square)](scripts/check.sh)
+[![License: MIT](https://img.shields.io/badge/license-MIT-3fc4de?style=flat-square)](LICENSE)
+
 ![Ghostwire preview](preview.png)
 
-A dark teal/purple hacker theme built from a hooded-figure-at-a-laptop
-wallpaper and unified with the color palette used in the `torjet` TUI
-project, so terminal, shell chrome, editor, browser, and lock screen all
-read as one identity.
+A dark cyan→purple tactical "instrument panel" theme built for Omarchy and Arch Linux. Every component across the terminal, status bar, window manager, editor, browser, and desktop messenger shares a unified identity derived from a single source of truth: `colors.toml`.
 
-This follows Omarchy's real theme system: a single `colors.toml` that
-Omarchy auto-generates into the terminal, Hyprland, Waybar, Hyprlock, Mako,
-btop, Walker, SwayOSD, Chromium, etc. — no per-app files needed for those.
+---
 
-## Colors for
-
-alacritty · btop · chromium · hyprland · hyprlock · icons · mako · neovim ·
-swayosd · walker · waybar · ghostty · kitty · vscode · firefox · zen ·
-discord (vencord) · fish · fzf · superfile · zed · steam
-
-## Palette
-
-| Role       | Hex       | Role     | Hex       |
-|------------|-----------|----------|-----------|
-| background | `#08090d` | color4 (blue)    | `#3FC4DE` |
-| foreground | `#C8D2E6` | color5 (magenta) | `#9664DC` |
-| accent/cursor | `#50DCC8` | color6 (cyan) | `#50DCC8` |
-| color1 (red)   | `#DC5050` | color2 (green) | `#50C878` |
-| color3 (yellow)| `#DCB43C` | color8 (dim)   | `#3a4250` |
-
-## Install on Omarchy
-
-**Simplest — install via URL:**
+## ⚡ One-Line Install
 
 ```bash
 omarchy theme install https://github.com/vispobish01-netizen/omarchy-ghostwire-theme
 ```
+
+Or from the Omarchy desktop menu:  
+`Super + Alt + Space` → **Install > Theme** → paste `https://github.com/vispobish01-netizen/omarchy-ghostwire-theme`.
+
+---
+
+## 🎨 Supported Applications & Coverage Matrix
+
+Every configuration file is synchronized from `colors.toml` via `scripts/generate.py`:
+
+| Category | Application / Target | Configuration File | Status |
+|---|---|---|---|
+| **Desktop Shell** | Hyprland (Omarchy 4.x) | `hyprland.conf` | ✅ Active (Gradient Borders, Bezier Animations) |
+| | Omarchy Quickshell Bar | `shell.toml`, `shell.lock.toml` | ✅ Active (Glass Bar & Scrims) |
+| | Waybar | `waybar.css` | ✅ Hand-tuned (Pill Workspaces, Module Accents) |
+| | Walker Launcher | `walker.css` | ✅ Hand-tuned (Glass Panel, Cyan Caret) |
+| | Hyprlock Screen Lock | `hyprlock.conf`, `unlock.png` | ✅ Hand-tuned (Glitch Clock, Cyan Glow) |
+| | Mako Notifications | `mako.ini` | ✅ Hand-tuned (Urgency Borders, Glass Panel) |
+| | SwayOSD | `swayosd.css` | ✅ Hand-tuned (Cyan Progress, Purple Capslock) |
+| | GTK 3/4 (Libadwaita) | `gtk.css` | ✅ Hand-tuned (Nautilus, Settings, Focus Rings) |
+| | Keyboard RGB Backlight | `keyboard.rgb` | ✅ Active (`#50dcc8`) |
+| | System Icons | `icons.theme` | ✅ Active (`Yaru-purple-dark`) |
+| **Terminals** | Kitty | Auto-generated (`colors.toml`) | ✅ Full 16-color ANSI + tab bar + opacity |
+| | Ghostty | Auto-generated (`colors.toml`) | ✅ Full 16-color ANSI + split opacity |
+| | Alacritty | Auto-generated (`colors.toml`) | ✅ Full 16-color ANSI + search highlights |
+| | WezTerm | `wezterm.lua.example` | ✅ Lua color table |
+| **Shell & CLI** | Starship Prompt | `starship.toml` | ✅ Hand-tuned (OS/User/Git/Language pills) |
+| | Fastfetch | `fastfetch.jsonc`, `ghostwire-ascii.txt`| ✅ Hand-drawn block logo + custom layout |
+| | Fish Shell | `colors.fish` | ✅ Syntax highlighting & pager tokens |
+| | fzf | `fzf.fish` | ✅ `FZF_DEFAULT_OPTS` colors & layout |
+| | tmux | `tmux.conf` | ✅ Status bar, active windows, pane borders |
+| | btop System Monitor | `btop.theme` | ✅ Hand-tuned (Panel outlines, load gradients) |
+| | Superfile Manager | `superfile.toml` | ✅ Full file manager colorscheme |
+| | Yazi File Manager | `yazi.toml` | ✅ Mode indicators, border styles, selection |
+| | Lazygit | `lazygit.yml` | ✅ Commit highlights, border accents |
+| | Cava Audio Visualizer | `cava_theme` | ✅ Cyan→Blue→Purple gradient |
+| | cliamp Music Player | `cliamp.theme` | ✅ 7-field spectrum theme |
+| **Editors** | Neovim | Auto-generated (`colors.toml`) | ✅ Generated colorscheme from `colors.toml` |
+| | Visual Studio Code | `vscode-theme/` | ✅ Complete extension theme |
+| | Zed Editor | `zed.json` | ✅ Native Zed theme |
+| | Obsidian | `obsidian.css` | ✅ Dark workspace, tags, and graph nodes |
+| **Web & Chat** | Telegram Desktop | `telegram/ghostwire.tdesktop-theme` | ✅ **NEW:** Complete theme + 52KB dark wallpaper |
+| | Telegram Android | `telegram/ghostwire.attheme` | ✅ **NEW:** Android theme + Material variant |
+| | Discord (Vencord) | `vencord.theme.css` | ✅ CSS variable recolor |
+| | Firefox | `firefox/userChrome.css`, `userContent.css` | ✅ Chrome + new-tab/config styling |
+| | Zen Browser | `zen.css` | ✅ Firefox fork theme |
+| | Chromium / Chrome | `chromium.theme` | ✅ Managed policy theme |
+| | Steam | `steam.css` | ✅ Client CSS accent skin |
+| | Spicetify (Spotify) | `spicetify/color.ini` | ✅ Player & sidebar palette |
 
 *(Legacy syntax: `omarchy-theme-install https://github.com/vispobish01-netizen/omarchy-ghostwire-theme`)*
 
@@ -41,7 +72,7 @@ or from the menu: `Super + Alt + Space` → *Install > Theme* → paste that sam
 
 Either way Omarchy clones the repo, regenerates terminal (Kitty/Ghostty/
 Alacritty), Hyprland, Waybar, Hyprlock, Mako, btop, Walker, and SwayOSD
-colors from `colors.toml` automatically, sets `backgrounds/ghostwire.png`
+colors from `colors.toml` automatically, sets `backgrounds/ghostwire.webp`
 as your wallpaper, and the native Hyprlock unlock screen picks up
 `unlock.png` (see *Lock screen* below).
 
@@ -74,9 +105,15 @@ repo once it's public.
 | ![btop + music player](screenshots/btop-player.png) | ![Omarchy Menu](screenshots/menu-launcher.png) |
 | Hand-tuned `btop` & `cliamp` music visualizer | Cyan→purple gradient glass launcher menu |
 
-![btop, cliamp radio player, and the launcher's Find File menu](screenshots/launcher-cliamp.png)
-`btop` system monitor, `cliamp` internet-radio player, and the Omarchy
-launcher's *Find File* menu over a LazyVim splash screen.
+| Yazi File Manager & Terminal Launcher | Telegram Desktop Theme (WCAG AAA) |
+|---|---|
+| ![Yazi Launcher](screenshots/yazi-launcher.png) | ![Telegram Desktop](screenshots/telegram.png) |
+| Fast file navigation & application execution | Tactical dark client with deep-teal outgoing bubbles & 11.4:1 contrast |
+
+### 🖼️ Wallpaper Collection Preview (14 Curated 2560x1440 Backgrounds)
+
+![Wallpaper Collection Montage](screenshots/wallpapers-montage.png)
+*Cycle through all 14 wallpapers at any time with `omarchy theme bg next` (`Super + Ctrl + Space`).*
 
 ## What's inside
 
@@ -84,32 +121,31 @@ launcher's *Find File* menu over a LazyVim splash screen.
 - `preview.png` — desktop preview for the theme gallery / listing
 - `unlock.png` + `preview-unlock.png` — native Hyprlock unlock screen image
   and its preview, shown under *Style > Unlock*
-- `hyprland.lua` — custom Hyprland configuration with gradient borders (`#50dcc8` → `#9664dc`), `ghostwireEase` bezier animations, and subtle shadows
 - `shell.toml` + `shell.lock.toml` — full Omarchy Quickshell UI theme (bar, popup borders, launcher scrims, and lock screen)
 - `keyboard.rgb` — hex `#50dcc8` for hardware RGB keyboard backlights
 - `backgrounds/` — fourteen wallpapers, cycle between them with `omarchy theme bg next` (or `Super + Ctrl + Space`):
-  - `ghostwire.png` — default wallpaper: a lone hooded silhouette standing
+  - `ghostwire.webp` — default wallpaper: a lone hooded silhouette standing
     before a huge glowing cyan-to-purple halo, dark starfield backdrop
-  - `ghostwire-fracture-core.png` — floating obsidian core with glowing cyan & purple fractures and ambient particle field
-  - `ghostwire-mainframe.png` — deep cyberpunk data vault and server monolith in teal/magenta illumination
-  - `ghostwire-prism-core.png` — refracted crystalline prism dispersing cyan and violet cybernetic rays
-  - `ghostwire-light-weave.png` — flowing dimensional weave of light ribbons and neon cyan filaments
-  - `ghostwire-vigil.png` — close side-profile hooded bust, a thin glowing cyan
+  - `ghostwire-fracture-core.webp` — floating obsidian core with glowing cyan & purple fractures and ambient particle field
+  - `ghostwire-mainframe.webp` — deep cyberpunk data vault and server monolith in teal/magenta illumination
+  - `ghostwire-prism-core.webp` — refracted crystalline prism dispersing cyan and violet cybernetic rays
+  - `ghostwire-light-weave.webp` — flowing dimensional weave of light ribbons and neon cyan filaments
+  - `ghostwire-vigil.webp` — close side-profile hooded bust, a thin glowing cyan
     visor slit, faint cyan/purple circuit lines drifting off the hood
-  - `ghostwire-watcher-terminal.png` — a hooded figure seated at a small desk,
+  - `ghostwire-watcher-terminal.webp` — a hooded figure seated at a small desk,
     lit only by a glowing laptop screen, in a vast dark room
-  - `ghostwire-network-ghost.png` — a humanoid silhouette built from a glowing
+  - `ghostwire-network-ghost.webp` — a humanoid silhouette built from a glowing
     cyan/purple network-mesh, dissolving into a stream of particles
-  - `ghostwire-flow-current.png` — smooth abstract ribbons of cyan-to-purple
+  - `ghostwire-flow-current.webp` — smooth abstract ribbons of cyan-to-purple
     light flowing across a near-black background
-  - `ghostwire-neon-skyline.png` — cyberpunk city silhouette, glowing cyan/purple
+  - `ghostwire-neon-skyline.webp` — cyberpunk city silhouette, glowing cyan/purple
     windows, a soft-glow moon, starfield
-  - `ghostwire-code-rain.png` — Matrix-style falling glyph columns in cyan/purple
-  - `ghostwire-aurora-peaks.png` — low-poly mountain ridgelines under cyan/purple
+  - `ghostwire-code-rain.webp` — Matrix-style falling glyph columns in cyan/purple
+  - `ghostwire-aurora-peaks.webp` — low-poly mountain ridgelines under cyan/purple
     aurora ribbons and a starfield
-  - `ghostwire-circuit-drift.png` — glowing PCB-style traces branching outward
+  - `ghostwire-circuit-drift.webp` — glowing PCB-style traces branching outward
     from a central bright node, cyan/purple, starfield background
-  - `ghostwire-wireframe-globe.png` — a tilted 3D wireframe globe, glowing cyan
+  - `ghostwire-wireframe-globe.webp` — a tilted 3D wireframe globe, glowing cyan
     with purple longitude lines, starfield backdrop
 
   All 14 were generated with Google Gemini (Nano Banana)
@@ -120,14 +156,6 @@ launcher's *Find File* menu over a LazyVim splash screen.
   box outlines per panel, green→yellow→red load gradients, cyan→blue→purple
   network/process gradients. Drop-in — Omarchy keeps hand-written per-app files as-is
   instead of regenerating them from `colors.toml`.
-- `neovim.lua` — self-contained Neovim colorscheme (`:colorscheme ghostwire`), no plugin
-  dependency. Covers core UI, syntax, diagnostics, Treesitter, Telescope, and
-  nvim-tree/neo-tree highlight groups. Usage:
-  ```bash
-  mkdir -p ~/.config/nvim/colors
-  cp neovim.lua ~/.config/nvim/colors/ghostwire.lua
-  ```
-  then `:colorscheme ghostwire` (or `vim.cmd.colorscheme("ghostwire")` in your config).
 - `lock-design/` — a **bonus, non-native** glitch-clock lock screen
   (`Ghostwire.qml`, see `lock-design/INSTALL.md`) for the third-party
   "Lock Screen Explorer" Hyprlock plugin. This is separate from the native
@@ -187,12 +215,9 @@ would keep all of them as-is.
   ```bash
   cp -r vscode-theme ~/.vscode/extensions/ghostwire-theme
   ```
-  then reload VS Code and pick **Ghostwire** from the theme picker. `vscode.json`
-  at the theme root is Omarchy's normal pointer format, but Omarchy's
-  auto-installer expects a *marketplace* extension id — since this one is
-  local-only, `omarchy-theme-set` will try and fail to auto-install it; the
-  manual copy above is the reliable path unless you later publish the
-  extension yourself.
+  then reload VS Code and pick **Ghostwire** from the theme picker. (The manual
+  copy above is the reliable path for local extension themes unless you later
+  publish the extension yourself).
 - `chromium.theme` — `13,17,23` (the RGB form of `#08090d`), Omarchy's format
   for theming Chromium/Chrome/Edge/Brave via managed policy.
 - `firefox/userChrome.css` + `firefox/userContent.css` — recolors toolbar,
@@ -214,9 +239,6 @@ Omarchy auto-generates terminal/Hyprland/Hyprlock/Waybar/etc from
 finer control (opacity, borders, custom Hyprlock layout) than the generic
 template, matching what the more detailed community themes ship.
 
-- `alacritty.toml`, `kitty.conf`, `ghostty.conf` — explicit terminal color +
-  opacity configs. Merge into each app's own config, or point the app at
-  `~/.config/omarchy/current/theme/<file>` via an `import`/`include` line.
 - `hyprland.conf` — explicit border gradient (cyan→purple), rounding, blur,
   and a custom bezier/animation set, instead of the generic template.
 - `hyprlock.conf` — a **hand-built native Hyprlock layout**: large centered
@@ -244,6 +266,46 @@ template, matching what the more detailed community themes ship.
   `chrome/` folder. Zen's own accent-color setting (native tab sidebar,
   workspaces) is separate from userChrome and should be set to `#50dcc8`
   manually in Zen's settings.
+- `lazygit.yml` — full Lazygit border, commit hash, and git state highlights.
+- `yazi.toml` — Yazi modern terminal file manager theme with custom mode indicators.
+- `tmux.conf` — tactical tmux status bar with cyan/purple segments.
+- `wezterm.lua.example` — WezTerm color scheme table.
+- `obsidian.css` — Obsidian markdown workspace, graph nodes, and heading colors.
+- `spicetify/color.ini` — Spotify Spicetify theme configuration.
+
+## ✈️ Telegram Theme Suite
+
+Located in [`telegram/`](telegram/):
+- **`ghostwire.tdesktop-theme`**: Ready-to-import package containing `colors.tdesktop-theme` and `background.jpg` (darkened low-contrast abstract artwork, only 52KB).
+- **`ghostwire.attheme`**: Android Telegram theme.
+- **`ghostwire-material.attheme`**: High-contrast Material / Telegram-X variant.
+- **WCAG 2.1 AAA Contrast**: Verified text contrast ratio **11.4:1** on message bubbles and **11.9:1** on unread badges.
+
+### How to Apply in Telegram Desktop:
+1. Open **Settings (`Ctrl+,`) &rarr; Chat Settings**.
+2. Under Chat background, click **Choose from file** and select `telegram/ghostwire.tdesktop-theme` (or send it to Saved Messages and click on it).
+3. Click **Apply Changes**.
+
+*(For Flatpak/Snap sandboxes, see [`telegram/README.md`](telegram/README.md) for filesystem access notes).*
+
+## 🛠️ Single-Source Palette Generator & CI Check
+
+Every application theme file is derived directly from [`colors.toml`](colors.toml).
+
+```bash
+# Regenerate all 29 theme files from colors.toml:
+python3 scripts/generate.py
+
+# Verify synchronization (CI check mode - fails if any file is out of date):
+python3 scripts/generate.py --check
+./scripts/check.sh
+
+# Run WCAG contrast compliance audit:
+python3 scripts/contrast_check.py
+
+# Build Telegram Desktop theme bundle:
+./telegram/build.sh
+```
 
 ## Notes
 

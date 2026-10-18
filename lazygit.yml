@@ -1,0 +1,23 @@
+# Ghostwire theme for lazygit
+# Merge into ~/.config/lazygit/config.yml under `gui:`
+gui:
+  theme:
+    activeBorderColor:
+      - '#50dcc8'
+      - bold
+    inactiveBorderColor:
+      - '#1a2233'
+    optionsTextColor:
+      - '#3fc4de'
+    selectedLineBgColor:
+      - '#1c2740'
+    cherryPickedCommitBgColor:
+      - '#9664dc'
+    cherryPickedCommitFgColor:
+      - '#e8f7f4'
+    unstagedChangesColor:
+      - '#dc5050'
+    defaultFgColor:
+      - '#c8d2e6'
+    searchingActiveBorderColor:
+      - '#dcb43c'

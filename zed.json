@@ -1,14 +1,14 @@
 {
-  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
   "name": "Ghostwire",
-  "author": "Ghostwire theme",
+  "author": "Vispobish",
   "themes": [
     {
       "name": "Ghostwire",
       "appearance": "dark",
       "style": {
         "border": "#1a2233ff",
-        "border.variant": "#1a2333ff",
+        "border.variant": "#1a2233ff",
         "border.focused": "#50dcc8ff",
         "border.selected": "#9664dcff",
         "background": "#08090dff",
