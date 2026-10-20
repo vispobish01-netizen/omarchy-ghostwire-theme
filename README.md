@@ -61,7 +61,7 @@ Then `Super + Alt + Space` → *Style > Theme* → select **Ghostwire**.
 
 ## What's inside
 
-- `colors.toml` — the 22 required color keys Omarchy templates everything from
+- `colors.toml` — the 22 required Omarchy keys plus extra semantic tokens that Omarchy templates everything from
 - `preview.png` — desktop preview for the theme gallery / listing
 - `unlock.png` + `preview-unlock.png` — native Plymouth/Hyprlock unlock screen image and its preview, shown under *Style > Unlock*
 - `shell.toml` + `shell.lock.toml` — full Omarchy Quickshell UI theme (bar, popup borders, launcher scrims, and lock screen)
